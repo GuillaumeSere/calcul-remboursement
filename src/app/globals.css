@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(202, 86%, 94%);
+  --foreground: hsl(202, 55%, 16%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -20,5 +24,250 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Plus Jakarta Sans", serif;
 }
+
+.underline{
+    font-weight: 500;
+    color: var(--slate-700);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.link{
+    color: var(--slate-900);
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+.link:focus {
+    border: 1px solid var(--lime);
+}
+
+.devise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    margin-left: -0.6rem;
+}
+
+.active{
+    background-color: var(--lime);
+}
+
+.no-active{
+    background-color: var(--background);
+}
+
+.error{
+    background-color: rgb(201, 15, 15);
+    color: white;
+}
+
+.years{
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 80px;
+    height: 40px;
+    margin-top: 1.3rem;
+    margin-right: -0.7rem;
+}
+
+.pourcentage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    margin-top: 1.3rem;
+    right: 0.3rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--lime);
+    color: var(--slate-900);
+    font-weight: 700;
+    padding: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.btn p{
+    margin-left: -1rem;
+}
+
+.box{
+    background-color: var(--slate-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom-left-radius: 60px;
+}
+
+.box-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-result h2{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.box-result p{
+    color: var(--slate-300);
+    font-size: 16px;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.card h2{
+  margin-top: -8.5rem;
+  position: absolute;
+}
+
+.text-card{
+    text-align: left;
+    position: absolute;
+    margin-top: -6rem;
+    color: var(--slate-500);
+    font-size: 14px;
+}
+
+.description-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.description-card span{
+    font-size: 12px;
+    color: var(--slate-500);
+}
+
+.number{
+    color: var(--lime);
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.total{
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+.description span{
+    color: var(--slate-500);
+    font-size: 12px;
+}
+
+.card-box{
+    min-width: 380px;
+    border-radius: 5px;
+    border-top: 2px solid var(--lime);
+    background-color: hsl(201, 53%, 12%);
+    padding: 1rem;
+}
+
+.radio-label{
+    width: 100%;
+}
+
+.radio-label input[type="radio"] {
+    position: absolute;
+    font-weight: 700;
+    color: var(--lime);
+    background-color: var(--lime);
+    left:1rem;
+    margin-top: 0.5rem;
+}
+
+.radio-label span {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 4rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--slate-900);
+    transition: all 0.2s;
+}
+
+.radio-label input[type="radio"]:checked + span {
+    border-color: var(--lime);
+    color: var(--slate-900);
+    font-weight: 700;
+    background-color: hsla(61, 70%, 52%, 0.27);
+}
+
+.radio-label input[type="radio"]:active + span {
+    background-color: #f7fee7;
+}
+
+/* Ajoutez ceci dans votre fichier CSS */
+.custom-radio {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid var(--slate-700);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: white;
+}
+
+.custom-radio:checked {
+    border-color: var(--lime);
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.custom-radio::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.custom-radio:checked::before {
+    background-color: var(--lime);
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid white;
+}
+
