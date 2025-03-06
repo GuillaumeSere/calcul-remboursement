@@ -89,11 +89,11 @@ export default function Home() {
     };
 
     return (
-        <div className="min-h-screen p-6">
-            <div className="max-w-5xl mx-auto bg-white  rounded-2xl shadow-md flex flex-col md:flex-row">
+        <div className="container min-h-screen p-6">
+            <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-md flex flex-col md:flex-row">
                 <div className="md:w-1/2 p-8">
-                    <div className="flex justify-between items-center mb-6">
-                        <h1 className="text-2xl font-bold link">Mortgage Calculator</h1>
+                    <div className="flex flex-wrap justify-between items-center mb-6">
+                        <h1 className="text-2xl font-bold">Mortgage Calculator</h1>
                         <button
                             className="underline"
                             onClick={() => {
@@ -147,7 +147,7 @@ export default function Home() {
                             {errors.mortgageAmount && <p id="mortgageAmountError" className="text-red-600 text-sm mt-2">{errors.mortgageAmount}</p>}
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="flex flex-wrap grid-cols-1 md:grid-cols-2 gap-6">
                             <div className='relative'>
                                 <h2 className="mb-2">Montage Term</h2>
                                 <span className={`absolute years transform -translate-y-1/2 w-5 h-5 transition-colors ${
@@ -242,7 +242,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="mt-6">
+                    <div className="flex mt-6">
                         <button
                             onClick={validateForm}
                             className="btn w-2xs  text-white py-2 rounded-full  transition-colors duration-200"
@@ -258,7 +258,7 @@ export default function Home() {
                 <div className="md:w-1/2 box p-9 rounded-bl-4xl rounded-r-2xl">
                     {showResults && totalAmountPaid !== null ? (
                         <div className='w-full p-4 card'>
-                            <h2 className="text-lg text-white font-semibold mb-2">Your results</h2>
+                            <h2 className="text-lg title-card text-white font-semibold mb-2">Your results</h2>
                             <p className='text-card'>Your results are shown below based on the information you provided. To adjust the results, edit the form and click"calculate repayments"aigain.</p>
                             <div className='card-box'>
                                 <p className="description-card text-xl">

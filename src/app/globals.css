@@ -52,7 +52,7 @@ body {
     font-weight: 700;
     width: 40px;
     height: 40px;
-    margin-left: -0.6rem;
+    margin-left: -0.65rem;
 }
 
 .active{
@@ -77,7 +77,7 @@ body {
     width: 80px;
     height: 40px;
     margin-top: 1.3rem;
-    margin-right: -0.7rem;
+    margin-right: -0.9rem;
 }
 
 .pourcentage{
@@ -88,7 +88,7 @@ body {
     width: 40px;
     height: 40px;
     margin-top: 1.3rem;
-    right: 0.3rem;
+    right: 0.1rem;
 }
 
 .btn{
@@ -100,6 +100,10 @@ body {
     padding: 0.8rem;
     cursor: pointer;
     margin-bottom: 1rem;
+}
+
+.btn:hover{
+    background-color: hsla(61, 70%, 52%, 0.516);
 }
 
 .btn p{
@@ -220,6 +224,10 @@ body {
     transition: all 0.2s;
 }
 
+.radio-label:hover span{
+    border: 1px solid hsla(61, 70%, 52%, 0.561);
+}
+
 .radio-label input[type="radio"]:checked + span {
     border-color: var(--lime);
     color: var(--slate-900);
@@ -269,5 +277,82 @@ body {
     width: 1rem;
     height: 1rem;
     border: 2px solid white;
+}
+
+@media (max-width:1020px){
+    .card-box{
+        display: flex;
+        flex-direction: column;
+        min-width: 280px !important;
+        margin-top: 3rem;
+    }
+}
+
+
+@media (max-width: 450px){
+
+    .underline{
+        margin-top: 0.5rem;
+    }
+    .btn{
+        justify-content: space-around;
+        font-size: 14px;
+    }
+    .devise{
+        width: 37px;
+        height: 37px;
+        top: 19.95px;
+        left: 0.7rem;
+    }
+    .years{
+        width: 78px;
+        height: 37px;
+        margin-top: 1.2rem;
+        right: 1rem;
+    }
+    .pourcentage{
+        width: 38px;
+        height: 37px;
+        margin-top: 1.2rem;
+        right: 0.1rem;
+    }
+    h1{
+        font-size: 22px;
+    }
+    h2{
+        font-size: 14px;
+    }
+    .title-card{
+        font-size: 18px;
+        margin-top: -6.5rem !important;
+    }
+    .link{
+        width: 100% !important;
+        font-size: 14px;
+    }
+    .relative{
+        width: 100%;
+    }
+    .container{
+        padding: 0 !important;
+    }
+    .box{
+        border-radius: 0;
+        padding: 1px;
+    }
+    .card{
+        margin-top: 7rem;
+        display: flex;
+        padding: 1rem;
+    }
+    .card-box{
+        display: flex;
+        flex-direction: column;
+        min-width: 280px;
+        margin-top: 3rem;
+    }
+    .text-card{
+        margin-top: -3.5rem;
+    }
 }
 
