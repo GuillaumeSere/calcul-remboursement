@@ -90,7 +90,8 @@ export default function Home() {
     };
 
     return (
-        <div className="container min-h-screen p-6">
+        <div className='container mx-auto min-h-screen p-6 flex items-center justify-center'>
+             <div className="container">
             <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-md flex flex-col md:flex-row">
                 <div className="md:w-1/2 p-8">
                     <div className="flex flex-wrap justify-between items-center mb-6">
@@ -290,6 +291,8 @@ export default function Home() {
                 </div>
             </div>
         </div>
+        </div>
+       
     );
 }
 
