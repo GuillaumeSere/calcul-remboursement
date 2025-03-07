@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
     const [mortgageAmount, setMortgageAmount] = useState('');
@@ -245,12 +246,17 @@ export default function Home() {
                     <div className="flex mt-6">
                         <button
                             onClick={validateForm}
-                            className="btn w-2xs  text-white py-2 rounded-full  transition-colors duration-200"
+                            className="btn w-2xs text-white py-2 rounded-full transition-colors duration-200"
                             aria-label="Calculer les remboursements"
                             tabIndex="0"
                             onKeyDown={(e) => e.key === 'Enter' && validateForm()}
                         >
-                            <img src='../../../assets/images/icon-calculator.svg' alt='calculator' />
+                            <Image 
+                                src='/assets/images/icon-calculator.svg' 
+                                alt='calculator'
+                                width={24}
+                                height={24}
+                            />
                             <p>Calculate Repayments</p>
                         </button>
                     </div>
@@ -259,7 +265,7 @@ export default function Home() {
                     {showResults && totalAmountPaid !== null ? (
                         <div className='w-full p-4 card'>
                             <h2 className="text-lg title-card text-white font-semibold mb-2">Your results</h2>
-                            <p className='text-card'>Your results are shown below based on the information you provided. To adjust the results, edit the form and click"calculate repayments"aigain.</p>
+                            <p className='text-card'>Your results are shown below based on the information you provided. To adjust the results, edit the form and click &quot;calculate repayments&quot; again.</p>
                             <div className='card-box'>
                                 <p className="description-card text-xl">
                                     <span>Your monthly repayments</span><strong className='number'>£{Number(monthlyRepayment).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</strong>
@@ -271,9 +277,14 @@ export default function Home() {
                         </div>
                     ) : (
                         <div className='box-result'>
-                            <img src="../../../assets/images/illustration-empty.svg" alt="empty" />
+                            <Image 
+                                src="/assets/images/illustration-empty.svg" 
+                                alt="empty"
+                                width={200}
+                                height={200}
+                            />
                             <h2>Results shown here</h2>
-                            <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+                            <p>Complete the form and click &quot;calculate repayments&quot; to see what your monthly repayments would be.</p>
                         </div>
                     )}
                 </div>
