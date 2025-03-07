@@ -271,7 +271,7 @@ export default function Home() {
                                     <span>Your monthly repayments</span><strong className='number'>£{Number(monthlyRepayment).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</strong>
                                 </p><hr></hr>
                                 <p className="description text-xl mt-2">
-                                    <span>Total you'll repay over the term</span><strong className='total'>£{Number(totalAmountPaid).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</strong>
+                                    <span>Total you&apos;ll repay over the term</span><strong className='total'>£{Number(totalAmountPaid).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</strong>
                                 </p>
                             </div>
                         </div>
